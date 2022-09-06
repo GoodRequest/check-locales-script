@@ -4,7 +4,8 @@ const join = require('path').join
 
 const i18nextScanner = require(join(process.cwd(), 'i18next-scanner.config'))
 
-const { lngs, ns, defaultValue } = i18nextScanner.options
+const { lngs, ns, defaultValue: originalDefaultValue } = i18nextScanner.options
+const defaultValue = typeof originalDefaultValue === 'function' ? originalDefaultValue() : originalDefaultValue
 
 const pathTemplate = i18nextScanner.options.resource.savePath
 
