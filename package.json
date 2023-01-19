@@ -1,5 +1,5 @@
 {
-  "name": "check-locales-script",
+  "name": "@goodrequest/check-locales-script",
   "version": "0.0.1",
   "bin": "./index.js"
 }
